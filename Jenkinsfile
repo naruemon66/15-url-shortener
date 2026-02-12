@@ -3,7 +3,7 @@ pipeline {
   environment {
     // แก้เป็นตัวเล็ก และใช้ขีดกลาง (-) แทน Underscore (_)
     VERCEL_PROJECT_NAME = 'devops15-quiz1'
-    VERCEL_TOKEN = credentials('devops15-token')
+    VERCEL_TOKEN = credentials('devops15-vercel-token')
 }
    agent {
     kubernetes {
