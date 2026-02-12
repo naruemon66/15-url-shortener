@@ -2,8 +2,8 @@ pipeline {
 
   environment {
     // แก้เป็นตัวเล็ก และใช้ขีดกลาง (-) แทน Underscore (_)
-    VERCEL_PROJECT_NAME = 'DevOps15-Quiz1'
-    VERCEL_TOKEN = credentials('DevOps15-token')
+    VERCEL_PROJECT_NAME = 'devOps15-quiz1'
+    VERCEL_TOKEN = credentials('devOps15-token')
 }
    agent {
     kubernetes {
@@ -52,8 +52,8 @@ spec:
         container('my-builder') {
           sh 'npm install -g vercel@latest'
           sh '''
-            vercel link --project devops15-quiz1 --token DevOps15-token --yes
-            vercel --token DevOps15-token --prod --confirm
+            vercel link --project $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --yes
+            vercel --token $VERCEL_TOKEN --prod --confirm
           '''
         }
       }
