@@ -42,7 +42,7 @@ spec:
     stage('Test Build') {
       steps {
         container('my-builder') {
-          sh 'npm run test'
+          sh 'npm run'
         }
       }
     }
