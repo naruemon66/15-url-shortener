@@ -35,7 +35,6 @@ spec:
       steps {
         container('my-builder') {
           sh 'npm install'
-          sh 'npm run build'
         }
       }
     }
