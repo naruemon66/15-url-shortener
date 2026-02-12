@@ -35,8 +35,6 @@ spec:
       steps {
         container('my-builder') {
           sh 'npm ci'
-          sh 'npm run build' /*ถ้ามีปัญหาลบอันนี้ได้*/
-        }
       }
     }
 
