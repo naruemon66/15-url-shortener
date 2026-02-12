@@ -35,6 +35,7 @@ spec:
       steps {
         container('my-builder') {
           sh 'npm ci'
+        }
       }
     }
 
