@@ -52,8 +52,8 @@ spec:
         container('my-builder') {
           sh 'npm install -g vercel@latest'
           sh '''
-            vercel link --project $VERCEL_PROJECT_NAME --token $VERCEL_TOKEN --yes
-            vercel --token $VERCEL_TOKEN --prod --confirm
+            vercel link --project devops15-quiz1 --token DevOps15-token --yes
+            vercel --token DevOps15-token --prod --confirm
           '''
         }
       }
