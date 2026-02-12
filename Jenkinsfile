@@ -34,7 +34,7 @@ spec:
     stage('Build') {
       steps {
         container('my-builder') {
-          sh 'npm ci'
+          sh 'npm install'
           sh 'npm run build'
         }
       }
